@@ -34,7 +34,7 @@ Noticia.findById = function (id, result) {
 };
 Noticia.findAll = function (result) {
   dbConn.query("Select users.nombre AS usuario, noticias.titulo,noticias.descripcion,noticias.id_user,noticias.visible,noticias.fecha_creacion," +
-  " noticias.categoria, 'hola' as imagen,noticias.resumen, noticias.id from noticias " +
+  " noticias.categoria, noticias.imagen as imagen,noticias.resumen, noticias.id from noticias " +
   " INNER JOIN users ON users.id = noticias.id_user ", function (err, res) {
     if (err) {
       console.log("error: ", err);
